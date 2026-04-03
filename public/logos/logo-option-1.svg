@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5D76E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#goldGrad1)" />
+  <circle cx="50" cy="50" r="44" fill="#0D0D1A" />
+  <text x="50" y="62" font-family="Poppins, sans-serif" font-size="28" font-weight="900" fill="url(#goldGrad1)" text-anchor="middle">MSP</text>
+</svg>

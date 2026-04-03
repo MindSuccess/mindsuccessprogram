@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Resources | Best Books, Tools & Courses for Mindset & Success"
+  description="Curated resources for your mindset journey — top books, online courses, apps, and YouTube channels for personal development and success."
+>
+  <section class="py-20 bg-gradient-to-br from-[#0D0D1A] via-[#1A1A2E] to-[#0D0D1A]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h1 class="text-5xl font-bold text-white mb-4">Mindset <span class="text-[#D4AF37]">Resources</span></h1>
+        <p class="text-gray-300 text-xl max-w-2xl mx-auto">Everything you need to accelerate your personal transformation — books, courses, tools, and more.</p>
+      </div>
+
+      <!-- Top Books -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+          <span class="text-[#D4AF37]">📚</span> Essential Books
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: "Mindset: The New Psychology of Success", author: "Carol S. Dweck", desc: "The foundational book on growth vs fixed mindset. Required reading for anyone serious about personal development.", tag: "Top Pick" },
+            { title: "Think and Grow Rich", author: "Napoleon Hill", desc: "A timeless classic on the mindset principles behind financial and personal success. Studied by millions worldwide.", tag: "Classic" },
+            { title: "Psycho-Cybernetics", author: "Maxwell Maltz", desc: "How your self-image controls your success. Learn to reprogram your mental blueprint for achievement.", tag: "Bestseller" },
+            { title: "The Power of Your Subconscious Mind", author: "Joseph Murphy", desc: "A deep dive into how the subconscious mind works and practical techniques to harness it for success.", tag: "Classic" },
+            { title: "Atomic Habits", author: "James Clear", desc: "The science-backed blueprint for building tiny habits that compound into massive results over time.", tag: "Modern Must-Read" },
+            { title: "Breaking the Habit of Being Yourself", author: "Joe Dispenza", desc: "How to use neuroscience and quantum physics to reprogram your thoughts and transform your reality.", tag: "Science-Backed" },
+          ].map(book => (
+            <div class="bg-[#1A1A2E] rounded-2xl p-6 border border-[#D4AF37]/20 hover:border-[#D4AF37]/60 transition-all">
+              <span class="text-xs font-bold text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full">{book.tag}</span>
+              <h3 class="text-white font-bold text-lg mt-3 mb-1">{book.title}</h3>
+              <p class="text-gray-500 text-sm mb-3">by {book.author}</p>
+              <p class="text-gray-400 text-sm mb-4">{book.desc}</p>
+              <a href="[AMAZON_AFFILIATE_LINK]" class="text-[#D4AF37] font-semibold text-sm hover:underline">
+                View on Amazon →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Top Courses -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+          <span class="text-[#D4AF37]">🎓</span> Top Online Courses
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            { name: "Mindvalley All Access", platform: "Mindvalley", price: "$499/year", desc: "Access to 100+ transformational programs covering mindset, productivity, health, relationships, and more. The Netflix of personal development.", link: "[MINDVALLEY_AFFILIATE_LINK]", badge: "Best Overall" },
+            { name: "NeuroGym Inner Circle", platform: "NeuroGym", price: "$97/month", desc: "John Assaraf's science-backed brain training program. Combines neuroscience with practical mindset coaching.", link: "[NEUROGYM_AFFILIATE_LINK]", badge: "Science-Backed" },
+            { name: "Blinkist Premium", platform: "Blinkist", price: "$7.49/month", desc: "Key insights from 6,000+ nonfiction books in 15 minutes. Perfect for busy professionals who want to keep learning.", link: "[BLINKIST_AFFILIATE_LINK]", badge: "Best Value" },
+            { name: "Audible Premium Plus", platform: "Amazon", price: "$14.95/month", desc: "Listen to the world's best personal development books and programs on the go. Massive library of titles.", link: "[AUDIBLE_AFFILIATE_LINK]", badge: "Audio Learning" },
+          ].map(course => (
+            <div class="bg-[#1A1A2E] rounded-2xl p-8 border border-[#7C3AED]/30 hover:border-[#7C3AED]/60 transition-all">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <span class="text-xs font-bold text-[#7C3AED] bg-[#7C3AED]/10 px-3 py-1 rounded-full">{course.badge}</span>
+                  <h3 class="text-white font-bold text-xl mt-3">{course.name}</h3>
+                  <p class="text-gray-500 text-sm">{course.platform} · {course.price}</p>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-6">{course.desc}</p>
+              <a href={course.link} class="inline-block bg-gradient-to-r from-[#D4AF37] to-[#7C3AED] text-white font-bold py-3 px-6 rounded-xl hover:opacity-90 transition-opacity">
+                Get Access →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- YouTube Channels -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+          <span class="text-[#D4AF37]">🎬</span> Must-Watch Videos
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-[#1A1A2E] rounded-2xl overflow-hidden border border-gray-700">
+            <div class="aspect-video bg-black flex items-center justify-center">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/qX9FSZJu448"
+                title="How to Reprogram Your Subconscious Mind"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="w-full aspect-video"
+              ></iframe>
+            </div>
+            <div class="p-5">
+              <h3 class="text-white font-bold mb-2">How to Reprogram Your Subconscious Mind</h3>
+              <p class="text-gray-400 text-sm">A powerful breakdown of how your subconscious controls your results — and what you can do about it.</p>
+            </div>
+          </div>
+          <div class="bg-[#1A1A2E] rounded-2xl overflow-hidden border border-gray-700">
+            <div class="aspect-video bg-black flex items-center justify-center">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/BQ4yd2W50No"
+                title="The Power of Mindset"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="w-full aspect-video"
+              ></iframe>
+            </div>
+            <div class="p-5">
+              <h3 class="text-white font-bold mb-2">The Power of Mindset — Tony Robbins</h3>
+              <p class="text-gray-400 text-sm">Tony Robbins breaks down the psychology of success and how to shift your mindset instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Apps & Tools -->
+      <div>
+        <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+          <span class="text-[#D4AF37]">📱</span> Apps & Tools
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { name: "Headspace", desc: "World-leading meditation app. Build focus, reduce stress, and train your brain daily.", tag: "Meditation", free: "Free trial available" },
+            { name: "Calm", desc: "Sleep stories, breathwork, and guided meditation to calm your mind and sharpen focus.", tag: "Sleep & Calm", free: "Free trial available" },
+            { name: "Notion", desc: "Build your personal development system — goals, habit tracking, journaling, all in one place.", tag: "Productivity", free: "Free plan available" },
+          ].map(app => (
+            <div class="bg-[#1A1A2E] rounded-2xl p-6 border border-gray-700 hover:border-[#D4AF37]/40 transition-all">
+              <span class="text-xs text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full font-bold">{app.tag}</span>
+              <h3 class="text-white font-bold text-xl mt-4 mb-2">{app.name}</h3>
+              <p class="text-gray-400 text-sm mb-3">{app.desc}</p>
+              <p class="text-green-400 text-xs font-medium">{app.free}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

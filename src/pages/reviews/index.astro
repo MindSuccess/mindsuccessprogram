@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const reviews = [
+  {
+    title: "Mindvalley Review",
+    subtitle: "The World's #1 Personal Development Platform",
+    href: "/reviews/mindvalley-review/",
+    rating: 4.8,
+    badge: "Editor's Choice",
+    verdict: "Mindvalley is the most comprehensive personal development platform available. With 500+ courses from world-class experts and a thriving community, it's the best investment for serious personal growth.",
+    pros: ["500+ world-class programs", "Vibrant global community", "Regular new content", "Mobile app included"],
+    affiliate: "[MINDVALLEY_AFFILIATE_LINK]"
+  },
+  {
+    title: "NeuroGym Review",
+    subtitle: "Science-Based Brain Training for Success",
+    href: "/reviews/neurogym-review/",
+    rating: 4.6,
+    badge: "Top Rated",
+    verdict: "John Assaraf's NeuroGym delivers genuinely science-backed programs for rewiring the brain's success pathways. Exceptional for people who want neuroscience-grounded methods.",
+    pros: ["Grounded in neuroscience", "Addresses money beliefs deeply", "Coaching community", "Proven methodology"],
+    affiliate: "[NEUROGYM_AFFILIATE_LINK]"
+  },
+  {
+    title: "Best Mindset Programs 2024",
+    subtitle: "Our Top 10 Picks for Every Goal and Budget",
+    href: "/reviews/best-mindset-programs/",
+    rating: null,
+    badge: "Comparison Guide",
+    verdict: "Can't decide which program is right for you? Our comprehensive comparison of the top 10 mindset programs breaks down features, pricing, and best use cases for each.",
+    pros: ["All budgets covered", "Every learning style", "Beginner to advanced", "Updated for 2024"],
+    affiliate: null
+  }
+];
+---
+
+<Layout
+  title="Best Mindset Programs — Honest Reviews & Comparisons | Mind Success Program"
+  description="Honest, in-depth reviews of the world's best mindset and personal development programs. Compare Mindvalley, NeuroGym, MasterClass and more."
+>
+  <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <p class="text-[#D4AF37] font-semibold uppercase tracking-widest mb-3 text-sm">Unbiased Reviews</p>
+      <h1 class="text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Program Reviews</h1>
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+        We've personally tested and vetted every program we review. No sponsored fluff — just honest assessments of what works and what doesn't.
+      </p>
+    </div>
+
+    <!-- Review disclaimer -->
+    <div class="card-bg rounded-xl p-4 border border-[#D4AF37]/20 mb-10 flex items-start gap-3">
+      <span class="text-[#D4AF37] text-xl mt-0.5">ℹ️</span>
+      <p class="text-gray-400 text-sm">
+        <strong class="text-gray-300">Affiliate Disclosure:</strong> Some links on this page are affiliate links. We may earn a commission if you purchase through our link, at no extra cost to you. This doesn't influence our ratings — we only recommend programs we genuinely believe in.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8">
+      {reviews.map((review, i) => (
+        <div class="card-bg rounded-2xl p-8 border border-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all">
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-xs font-bold text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full">{review.badge}</span>
+                {i === 0 && <span class="text-xs font-bold text-white bg-[#7C3AED] px-3 py-1 rounded-full">🏆 #1 Pick</span>}
+              </div>
+              <h2 class="text-2xl font-black text-white mb-1" style="font-family:'Poppins',sans-serif;">{review.title}</h2>
+              <p class="text-[#D4AF37] font-medium mb-4">{review.subtitle}</p>
+              {review.rating && (
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-[#D4AF37] text-xl">{'★'.repeat(Math.floor(review.rating))}</span>
+                  <span class="text-white font-bold">{review.rating}/5</span>
+                  <span class="text-gray-500 text-sm">Our Rating</span>
+                </div>
+              )}
+              <p class="text-gray-300 mb-5">{review.verdict}</p>
+              <ul class="grid grid-cols-2 gap-2 mb-6">
+                {review.pros.map(pro => (
+                  <li class="flex items-center gap-2 text-gray-400 text-sm">
+                    <span class="text-[#D4AF37]">✓</span> {pro}
+                  </li>
+                ))}
+              </ul>
+              <div class="flex flex-wrap gap-4">
+                <a href={review.href} class="btn-outline-gold text-sm py-2 px-5">Read Full Review →</a>
+                {review.affiliate && (
+                  <a href={review.affiliate} class="btn-purple text-sm py-2 px-5" rel="sponsored noopener" target="_blank">
+                    Get Access →
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-[#0A0A14]">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Not Sure Which Program is Right for You?</h2>
+      <p class="text-gray-400 mb-8">Answer 3 quick questions and we'll point you toward the perfect program for your goals, learning style, and budget.</p>
+      <a href="/reviews/best-mindset-programs/" class="btn-gold text-lg">Find Your Perfect Program →</a>
+    </div>
+  </section>
+</Layout>

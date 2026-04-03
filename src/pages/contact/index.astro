@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Contact Mind Success Program | Get In Touch"
+  description="Have a question, partnership inquiry, or feedback? Contact the Mind Success Program team — we'd love to hear from you."
+>
+  <section class="py-24 bg-gradient-to-br from-[#0D0D1A] via-[#1A1A2E] to-[#0D0D1A]">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-white mb-4">Get In <span class="text-[#D4AF37]">Touch</span></h1>
+        <p class="text-gray-300 text-lg">Questions, partnerships, or feedback — we read every message.</p>
+      </div>
+
+      <div class="bg-[#1A1A2E] rounded-2xl p-10 border border-[#D4AF37]/20">
+        <form action="mailto:contact@mindsuccessprogram.com" method="post" enctype="text/plain" class="space-y-6">
+          <div>
+            <label for="name" class="block text-white font-medium mb-2">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Jane Smith"
+              class="w-full bg-[#0D0D1A] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] transition-colors"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-white font-medium mb-2">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="jane@example.com"
+              class="w-full bg-[#0D0D1A] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] transition-colors"
+            />
+          </div>
+          <div>
+            <label for="subject" class="block text-white font-medium mb-2">Subject</label>
+            <select
+              id="subject"
+              name="subject"
+              class="w-full bg-[#0D0D1A] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors"
+            >
+              <option value="">Select a topic...</option>
+              <option value="general">General Question</option>
+              <option value="review">Program Review Request</option>
+              <option value="partnership">Partnership / Affiliate</option>
+              <option value="feedback">Site Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block text-white font-medium mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Tell us how we can help..."
+              class="w-full bg-[#0D0D1A] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] transition-colors resize-none"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-gradient-to-r from-[#D4AF37] to-[#7C3AED] text-white font-bold py-4 rounded-xl text-lg hover:opacity-90 transition-opacity"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+          <p class="text-gray-400">Or email us directly at</p>
+          <a href="mailto:contact@mindsuccessprogram.com" class="text-[#D4AF37] font-semibold text-lg hover:underline">
+            contact@mindsuccessprogram.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

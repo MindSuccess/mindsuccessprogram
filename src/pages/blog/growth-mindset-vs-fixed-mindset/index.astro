@@ -1,0 +1,119 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout
+  title="Growth Mindset vs Fixed Mindset: How to Switch and Change Your Life"
+  description="What's the difference between a growth mindset and a fixed mindset? Learn the science, real-world signs, and exactly how to develop a growth mindset."
+>
+  <article class="py-16 bg-[#0D0D1A]">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="mb-10">
+        <span class="text-xs font-bold text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full uppercase tracking-wider">Mindset</span>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mt-4 mb-4 leading-tight">Growth Mindset vs Fixed Mindset: How to Switch and Change Your Life</h1>
+        <div class="flex items-center gap-4 text-gray-400 text-sm mb-6"><span>April 2026</span><span>·</span><span>15 min read</span></div>
+        <p class="text-xl text-gray-300 leading-relaxed">Stanford psychologist Carol Dweck's research on mindset has transformed education, sports, business, and personal development. The difference between a growth mindset and a fixed mindset, her studies show, predicts achievement, resilience, and ultimately life success more than talent or intelligence alone.</p>
+      </div>
+
+      <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6">
+        <h2 class="text-3xl font-bold text-white mt-10">The Core Difference</h2>
+        <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+          <div class="bg-red-900/20 border border-red-500/30 rounded-2xl p-8">
+            <h3 class="text-red-400 font-bold text-xl mb-4">Fixed Mindset</h3>
+            <p class="text-gray-300 text-sm mb-4">Believes abilities, intelligence, and talent are fixed traits. You either have them or you don't.</p>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>❌ "I'm just not a math person"</li>
+              <li>❌ "Some people are naturally successful"</li>
+              <li>❌ Avoids challenges to avoid looking dumb</li>
+              <li>❌ Gives up easily when things get hard</li>
+              <li>❌ Views feedback as personal criticism</li>
+              <li>❌ Feels threatened by others' success</li>
+            </ul>
+          </div>
+          <div class="bg-green-900/20 border border-green-500/30 rounded-2xl p-8">
+            <h3 class="text-green-400 font-bold text-xl mb-4">Growth Mindset</h3>
+            <p class="text-gray-300 text-sm mb-4">Believes abilities can be developed through dedication, learning, and hard work.</p>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>✅ "I can't do this yet — but I can learn"</li>
+              <li>✅ "Success is built, not born"</li>
+              <li>✅ Embraces challenges as growth opportunities</li>
+              <li>✅ Persists through obstacles</li>
+              <li>✅ Learns from criticism and feedback</li>
+              <li>✅ Inspired by others' success</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-white mt-10">The Research Behind Mindset</h2>
+        <p>Carol Dweck and her colleagues at Stanford University spent decades researching how people's beliefs about their own intelligence and ability affect their learning and achievement. The findings were transformational.</p>
+        <p>In one landmark study, Dweck and colleague Claudia Mueller gave students a series of challenging math problems. Half were praised for their intelligence ("You're so smart!") and half were praised for their effort ("You worked really hard on that!"). The results were striking:</p>
+        <ul class="list-disc ml-6 space-y-2">
+          <li>Students praised for intelligence developed a fixed mindset — they avoided challenges, performed worse on subsequent tests, and were more likely to lie about their scores</li>
+          <li>Students praised for effort developed a growth mindset — they sought out harder problems, performed significantly better on subsequent tests, and showed increased persistence</li>
+        </ul>
+        <p>The same pattern appears across business, sports, and relationships. Growth-mindset individuals consistently outperform fixed-mindset individuals over time — not because they're more talented, but because they persist, adapt, and learn where fixed-mindset individuals give up or avoid.</p>
+
+        <h2 class="text-3xl font-bold text-white mt-10">How to Identify Your Current Mindset</h2>
+        <p>Most people have a mix of both mindsets — a growth mindset in areas where they feel confident, and a fixed mindset in areas where they feel inadequate. Be honest with yourself as you review these scenarios:</p>
+        <div class="not-prose space-y-4 my-6">
+          {[
+            { scenario: "When you fail at something important", fixed: "Think 'I'm not good enough for this'", growth: "Ask 'What can I learn from this?'" },
+            { scenario: "When someone gives you critical feedback", fixed: "Feel defensive or hurt", growth: "Feel curious about how to improve" },
+            { scenario: "When someone else succeeds brilliantly", fixed: "Feel threatened or envious", growth: "Feel inspired and curious about their approach" },
+            { scenario: "When facing a very difficult challenge", fixed: "Look for an easier alternative or avoid it", growth: "Lean in — this is where growth happens" },
+          ].map(s => (
+            <div class="bg-[#1A1A2E] rounded-xl p-5 border border-gray-700">
+              <p class="text-[#D4AF37] font-bold text-sm mb-3">{s.scenario}</p>
+              <div class="grid grid-cols-2 gap-4">
+                <div><p class="text-red-400 text-xs font-bold mb-1">FIXED</p><p class="text-gray-400 text-sm">{s.fixed}</p></div>
+                <div><p class="text-green-400 text-xs font-bold mb-1">GROWTH</p><p class="text-gray-400 text-sm">{s.growth}</p></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <h2 class="text-3xl font-bold text-white mt-10">7 Practical Ways to Develop a Growth Mindset</h2>
+        <h3 class="text-2xl font-bold text-white mt-6">1. Add "Yet" to Your Limiting Statements</h3>
+        <p>This is the simplest and most powerful growth mindset hack. Every time you catch yourself saying "I can't do this" or "I'm not good at this," add the word "yet." "I can't do this yet." This one word shifts your brain from a fixed conclusion to an open possibility.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-6">2. Embrace the Power of "Not Yet"</h3>
+        <p>Dweck's research shows that giving students a grade of "Not Yet" instead of a failing grade changed their entire approach to learning. "Not Yet" implies a path forward. Adopt this framing in your own self-evaluation: you're not behind — you're not there yet.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-6">3. Reframe Failure as Data</h3>
+        <p>Fixed mindset people experience failure as a judgment about their identity ("I failed = I am a failure"). Growth mindset people experience failure as information ("I failed = this approach didn't work; what can I try differently?"). This isn't toxic positivity — it's a more accurate and useful interpretation of what failure actually means.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-6">4. Focus on the Process, Not Just the Outcome</h3>
+        <p>Growth mindset people are genuinely interested in the process — the learning, the problem-solving, the iteration. When you reward yourself for effort, learning, and improvement rather than only results, you build intrinsic motivation that sustains you through the inevitable setbacks.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-6">5. Seek Out Challenges Deliberately</h3>
+        <p>Comfort zones are fixed-mindset territory. Growth happens at the edges of your current ability — in the slightly uncomfortable, challenging zone that psychologist Mihaly Csikszentmihalyi identified as the optimal zone for both performance and satisfaction. Regularly put yourself in situations that stretch your capabilities.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-6">6. Learn From Others Without Comparison</h3>
+        <p>Fixed mindset comparison: "They're better than me — I must be inadequate." Growth mindset comparison: "They're further along than me — what can I learn from how they got there?" Transform potential threats into inspiration and learning opportunities.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-6">7. Curate Your Environment</h3>
+        <p>You become the average of the five people you spend the most time with. If you're surrounded by fixed-mindset thinkers — people who play it safe, avoid challenges, and attribute success to innate talent — their beliefs will influence yours. Deliberately seek out growth-mindset individuals, communities, and environments.</p>
+
+        <h2 class="text-3xl font-bold text-white mt-10">Growth Mindset in Business and Career</h2>
+        <p>Dweck's research on organizations found that companies with growth-mindset cultures significantly outperformed those with fixed-mindset cultures on measures of innovation, risk-taking, collaboration, and employee engagement. Microsoft's dramatic turnaround under Satya Nadella is frequently cited as an example of a growth mindset transformation at an organizational level.</p>
+        <p>For your career, a growth mindset means: seeking out stretch assignments, viewing failure as learning, investing in skills development, and treating feedback as a gift rather than a threat. These behaviors, compounded over years, create careers that fixed-mindset individuals struggle to match — not because of talent, but because of consistent learning and adaptation.</p>
+
+        <div class="bg-[#1A1A2E] rounded-2xl p-8 border border-[#D4AF37]/30 mt-10 not-prose">
+          <h3 class="text-2xl font-bold text-white mb-4">Deepen Your Mindset Practice</h3>
+          <p class="text-gray-300 mb-6">Mindvalley's "Uncompromised Life" by Marisa Peer and "Be Extraordinary" by Vishen Lakhiani are among the best programs for developing a rock-solid growth mindset at a deep level.</p>
+          <a href="[MINDVALLEY_AFFILIATE_LINK]" class="inline-block bg-gradient-to-r from-[#D4AF37] to-[#7C3AED] text-white font-bold py-3 px-8 rounded-xl hover:opacity-90 transition-opacity">
+            Explore Mindvalley Programs →
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-12 border-t border-gray-700">
+        <h2 class="text-2xl font-bold text-white mb-8">Related Articles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="/mindset-training/" class="bg-[#1A1A2E] rounded-xl p-6 border border-transparent hover:border-[#D4AF37]/40 transition-all"><h3 class="text-white font-bold mb-2">Complete Mindset Training Guide</h3><p class="text-gray-400 text-sm">Everything you need to build a powerful success mindset.</p></a>
+          <a href="/blog/how-to-reprogram-your-mind-for-success/" class="bg-[#1A1A2E] rounded-xl p-6 border border-transparent hover:border-[#D4AF37]/40 transition-all"><h3 class="text-white font-bold mb-2">Reprogram Your Mind for Success</h3><p class="text-gray-400 text-sm">Neuroscience-backed techniques for lasting mind transformation.</p></a>
+          <a href="/reviews/mindvalley-review/" class="bg-[#1A1A2E] rounded-xl p-6 border border-transparent hover:border-[#D4AF37]/40 transition-all"><h3 class="text-white font-bold mb-2">Mindvalley Review</h3><p class="text-gray-400 text-sm">Our full review of the world's leading mindset platform.</p></a>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Mind Success Program",
+  "url": "https://mindsuccessprogram.com",
+  "description": "Discover the world's most powerful mindset programs, tools, and techniques to rewire your brain for extraordinary success."
+};
+
+const featuredPrograms = [
+  {
+    name: "Mindvalley All Access",
+    description: "The world's largest personal growth platform with 500+ programs from top experts including Vishen Lakhiani, Jim Kwik, and Lisa Nichols.",
+    rating: 4.8,
+    badge: "Editor's Choice",
+    link: "[MINDVALLEY_AFFILIATE_LINK]",
+    price: "$99/month",
+    category: "All-in-One Platform"
+  },
+  {
+    name: "NeuroGym Brain Training",
+    description: "Science-backed neuroscience programs designed to rewire limiting beliefs and build the neural pathways of success.",
+    rating: 4.6,
+    badge: "Top Rated",
+    link: "[NEUROGYM_AFFILIATE_LINK]",
+    price: "$197",
+    category: "Brain Rewiring"
+  },
+  {
+    name: "Blinkist — Book Summaries",
+    description: "Access 5,000+ condensed book summaries from the world's top minds. Learn faster, apply more, and stay ahead.",
+    rating: 4.5,
+    badge: "Best Value",
+    link: "[BLINKIST_AFFILIATE_LINK]",
+    price: "$12.99/month",
+    category: "Learning"
+  }
+];
+
+const testimonials = [
+  {
+    name: "Marcus T.",
+    location: "Austin, TX",
+    text: "I was stuck in the same job for 6 years, feeling like my potential was being wasted. After following the mindset training on this site and joining Mindvalley, I rewired my beliefs about success. Within 8 months I launched my own consulting firm and doubled my income.",
+    stars: 5,
+    avatar: "MT"
+  },
+  {
+    name: "Priya S.",
+    location: "London, UK",
+    text: "The resources here are genuinely different from the generic self-help content you find everywhere else. The mind reprogramming guide changed how I approach challenges. I've used these techniques to overcome severe anxiety and now I run marathons and lead a team of 20.",
+    stars: 5,
+    avatar: "PS"
+  },
+  {
+    name: "David K.",
+    location: "Toronto, Canada",
+    text: "I was skeptical at first — I'd tried every self-help book and course out there. But the NeuroGym review here led me to John Assaraf's program and it was exactly what I needed. The science-based approach clicked for my analytical mind. Best investment I've made in myself.",
+    stars: 5,
+    avatar: "DK"
+  }
+];
+
+const articles = [
+  { title: "How to Reprogram Your Mind for Success", href: "/blog/how-to-reprogram-your-mind-for-success/", category: "Mind Reprogramming", readTime: "9 min read" },
+  { title: "The Best Morning Routine for Success in 2024", href: "/blog/best-morning-routine-for-success/", category: "Success Habits", readTime: "8 min read" },
+  { title: "Growth Mindset vs Fixed Mindset: The Science Explained", href: "/blog/growth-mindset-vs-fixed-mindset/", category: "Mindset", readTime: "7 min read" },
+];
+---
+
+<Layout
+  title="Mind Success Program — Rewire Your Mind for Extraordinary Success"
+  description="Discover the world's most powerful mindset programs, tools, and techniques to rewire your brain for extraordinary success. Expert reviews, guides, and resources."
+  schema={schema}
+>
+  <!-- HERO -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920"
+        alt="Mountain peaks at sunset representing the pinnacle of achievement"
+        class="w-full h-full object-cover"
+      />
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-4 py-2 mb-6">
+          <span class="text-[#D4AF37] text-sm font-semibold">🧠 Trusted by 20M+ achievers worldwide</span>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6" style="font-family:'Poppins',sans-serif;">
+          Unlock the Mind.<br/>
+          <span class="gold-gradient">Achieve the Impossible.</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-gray-200 max-w-2xl mb-10 leading-relaxed">
+          Discover the world's most powerful mindset programs, tools, and techniques to rewire your brain for extraordinary success.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/reviews/" class="btn-gold text-center text-lg">
+            🚀 Explore Programs
+          </a>
+          <a href="/mindset-training/" class="btn-outline-gold text-center text-lg">
+            Start Your Journey →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="bg-[#D4AF37] py-5">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10 text-[#0D0D1A] font-bold text-center">
+        <span class="text-lg">🌍 20M+ Lives Transformed</span>
+        <span class="hidden sm:block text-2xl opacity-30">|</span>
+        <span class="text-lg">📚 500+ Expert Programs</span>
+        <span class="hidden sm:block text-2xl opacity-30">|</span>
+        <span class="text-lg">⭐ 50,000+ Success Stories</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROGRAMS -->
+  <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <p class="text-[#D4AF37] font-semibold uppercase tracking-widest mb-3 text-sm">Curated For You</p>
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">
+        Top Mindset Programs
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+        We've tested hundreds of programs so you don't have to. These are the ones that actually deliver results.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {featuredPrograms.map((program) => (
+        <div class="card-bg rounded-2xl p-8 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-xs font-semibold text-[#7C3AED] bg-[#7C3AED]/10 px-3 py-1 rounded-full">{program.category}</span>
+            <span class="text-xs font-bold text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full">{program.badge}</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3" style="font-family:'Poppins',sans-serif;">{program.name}</h3>
+          <p class="text-gray-400 text-sm mb-4 flex-1">{program.description}</p>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex text-[#D4AF37]">{'★'.repeat(Math.floor(program.rating))}</div>
+            <span class="text-white font-semibold">{program.rating}/5</span>
+          </div>
+          <div class="flex justify-between items-center mb-5">
+            <span class="text-gray-400 text-sm">Starting from</span>
+            <span class="text-[#D4AF37] font-bold">{program.price}</span>
+          </div>
+          <a href={program.link} class="btn-purple text-center text-sm w-full" rel="sponsored noopener" target="_blank">
+            Get Access Now →
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="/reviews/" class="btn-outline-gold">See All Program Reviews →</a>
+    </div>
+  </section>
+
+  <!-- WHY MINDSET IS EVERYTHING -->
+  <section class="py-20 bg-[#0A0A14]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-[#D4AF37] font-semibold uppercase tracking-widest mb-3 text-sm">The Foundation</p>
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">
+          Why Mindset is Everything
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+          Your external world is a direct reflection of your internal programming. Change the mind, change everything.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card-bg rounded-2xl p-8 text-center border border-[#7C3AED]/20">
+          <div class="text-5xl mb-4">🧠</div>
+          <h3 class="text-xl font-bold text-white mb-3" style="font-family:'Poppins',sans-serif;">Your Brain is Programmable</h3>
+          <p class="text-gray-400">
+            Neuroscience confirms that neuroplasticity allows the brain to rewire itself at any age. The beliefs, habits, and thought patterns running your life right now were installed — and they can be updated.
+          </p>
+        </div>
+        <div class="card-bg rounded-2xl p-8 text-center border border-[#D4AF37]/20">
+          <div class="text-5xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold text-white mb-3" style="font-family:'Poppins',sans-serif;">Thoughts Become Reality</h3>
+          <p class="text-gray-400">
+            Research by Dr. Carol Dweck at Stanford shows that people with a growth mindset achieve 40% more than those with fixed beliefs. What you believe about your potential directly shapes your outcomes.
+          </p>
+        </div>
+        <div class="card-bg rounded-2xl p-8 text-center border border-[#7C3AED]/20">
+          <div class="text-5xl mb-4">🎯</div>
+          <h3 class="text-xl font-bold text-white mb-3" style="font-family:'Poppins',sans-serif;">Success Leaves Clues</h3>
+          <p class="text-gray-400">
+            The world's most successful people — from Elon Musk to Oprah Winfrey — share a set of mental frameworks and habits. These can be learned, practiced, and embedded into your daily life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <p class="text-[#D4AF37] font-semibold uppercase tracking-widest mb-3 text-sm">Real Results</p>
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">
+        Transformation Stories
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map((t) => (
+        <div class="card-bg rounded-2xl p-8 border border-[#D4AF37]/10">
+          <div class="flex text-[#D4AF37] mb-4">{'★'.repeat(t.stars)}</div>
+          <p class="text-gray-300 italic mb-6 leading-relaxed">"{t.text}"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#7C3AED] flex items-center justify-center text-white font-bold text-sm">
+              {t.avatar}
+            </div>
+            <div>
+              <p class="text-white font-semibold text-sm">{t.name}</p>
+              <p class="text-gray-500 text-xs">{t.location}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FEATURED ARTICLES -->
+  <section class="py-20 bg-[#0A0A14]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-[#D4AF37] font-semibold uppercase tracking-widest mb-3 text-sm">Knowledge Base</p>
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">
+          Featured Articles
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {articles.map((article) => (
+          <a href={article.href} class="card-bg rounded-2xl p-8 border border-[#D4AF37]/10 hover:border-[#D4AF37]/40 transition-all duration-300 hover:-translate-y-1 block">
+            <span class="text-xs font-semibold text-[#7C3AED] bg-[#7C3AED]/10 px-3 py-1 rounded-full">{article.category}</span>
+            <h3 class="text-lg font-bold text-white mt-4 mb-3" style="font-family:'Poppins',sans-serif;">{article.title}</h3>
+            <p class="text-gray-500 text-sm">{article.readTime}</p>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/blog/" class="btn-outline-gold">Read All Articles →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMAIL CAPTURE -->
+  <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative rounded-3xl overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#7C3AED] to-[#0D0D1A]"></div>
+      <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 80%, #D4AF37 0%, transparent 50%);"></div>
+      <div class="relative px-8 md:px-16 py-16 text-center">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">
+          Get Your FREE<br/><span class="gold-gradient">Mind Transformation Guide</span>
+        </h2>
+        <p class="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
+          Join 50,000+ achievers and receive our exclusive 7-day mind rewiring blueprint — the same techniques used by top performers worldwide.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            class="flex-1 px-5 py-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-[#D4AF37] text-sm"
+          />
+          <button type="submit" class="btn-gold whitespace-nowrap">
+            Send Me the Guide →
+          </button>
+        </form>
+        <p class="text-gray-500 text-xs mt-4">No spam, ever. Unsubscribe anytime. We respect your privacy.</p>
+      </div>
+    </div>
+  </section>
+</Layout>

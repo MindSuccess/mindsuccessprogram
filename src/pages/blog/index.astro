@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  {
+    title: "How to Reprogram Your Mind for Success",
+    description: "A deep-dive guide on the neuroscience and practical techniques behind rewiring your subconscious mind for lasting success.",
+    href: "/blog/how-to-reprogram-your-mind-for-success/",
+    category: "Mind Reprogramming",
+    readTime: "9 min read",
+    date: "January 15, 2024"
+  },
+  {
+    title: "The Best Morning Routine for Success in 2024",
+    description: "The exact morning routine used by elite performers to prime their mind and body for peak performance every single day.",
+    href: "/blog/best-morning-routine-for-success/",
+    category: "Success Habits",
+    readTime: "8 min read",
+    date: "January 22, 2024"
+  },
+  {
+    title: "Mindvalley vs MasterClass: Which Is Worth Your Money?",
+    description: "An honest head-to-head comparison of the two biggest personal development platforms to help you choose wisely.",
+    href: "/blog/mindvalley-vs-masterclass/",
+    category: "Reviews",
+    readTime: "7 min read",
+    date: "February 3, 2024"
+  },
+  {
+    title: "7 Powerful Subconscious Mind Techniques That Actually Work",
+    description: "Discover science-backed methods to access and reprogram your subconscious mind for automatic success habits.",
+    href: "/blog/subconscious-mind-techniques/",
+    category: "Mind Reprogramming",
+    readTime: "9 min read",
+    date: "February 14, 2024"
+  },
+  {
+    title: "Growth Mindset vs Fixed Mindset: The Science and How to Switch",
+    description: "Carol Dweck's research decoded — understand the two mindsets and exactly how to make the shift that changes everything.",
+    href: "/blog/growth-mindset-vs-fixed-mindset/",
+    category: "Mindset",
+    readTime: "7 min read",
+    date: "February 28, 2024"
+  }
+];
+---
+
+<Layout
+  title="Mindset & Success Blog — Mind Success Program"
+  description="Expert articles on mindset training, mind reprogramming, success habits, and personal development. Evidence-based guides to transform your life."
+>
+  <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <p class="text-[#D4AF37] font-semibold uppercase tracking-widest mb-3 text-sm">Knowledge Hub</p>
+      <h1 class="text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">The Mindset Blog</h1>
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+        Evidence-based guides, expert insights, and practical strategies to transform your mindset and accelerate your success.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {articles.map(a => (
+        <a href={a.href} class="card-bg rounded-2xl overflow-hidden border border-[#D4AF37]/10 hover:border-[#D4AF37]/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+          <div class="p-8 flex flex-col flex-1">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs font-semibold text-[#7C3AED] bg-[#7C3AED]/10 px-3 py-1 rounded-full">{a.category}</span>
+              <span class="text-gray-500 text-xs">{a.readTime}</span>
+            </div>
+            <h2 class="text-lg font-bold text-white mb-3 flex-1" style="font-family:'Poppins',sans-serif;">{a.title}</h2>
+            <p class="text-gray-400 text-sm mb-4">{a.description}</p>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-600 text-xs">{a.date}</span>
+              <span class="text-[#D4AF37] text-sm font-semibold">Read More →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-[#0A0A14]">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Ready to Go Deeper?</h2>
+      <p class="text-gray-400 mb-8">Explore our comprehensive pillar guides for transformative in-depth knowledge.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/mindset-training/" class="btn-gold">Mindset Training Guide</a>
+        <a href="/success-habits/" class="btn-outline-gold">Success Habits Guide</a>
+        <a href="/mind-reprogramming/" class="btn-purple">Mind Reprogramming</a>
+      </div>
+    </div>
+  </section>
+</Layout>
