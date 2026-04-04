@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="goldD" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D76E"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <!-- Hexagon icon (honeycomb / neural network feel) -->
+  <polygon points="30,10 42,17 42,31 30,38 18,31 18,17" 
+           fill="#D4AF3722" stroke="url(#goldD)" stroke-width="2"/>
+  <!-- Lightning bolt inside hex -->
+  <polyline points="33,17 27,29 31,29 27,39" 
+            fill="none" stroke="#F5D76E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Clean modern text -->
+  <text x="54" y="30" font-family="Trebuchet MS, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">Mind<tspan fill="#D4AF37">Success</tspan></text>
+  <text x="55" y="46" font-family="Trebuchet MS, sans-serif" font-size="9" font-weight="400" fill="#888888" letter-spacing="3">PROGRAM</text>
+</svg>

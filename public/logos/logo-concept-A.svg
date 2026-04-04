@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="goldA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D76E"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <!-- Upward arrow / mountain peak icon -->
+  <polygon points="22,48 30,20 38,48" fill="none" stroke="url(#goldA)" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="30" y1="20" x2="30" y2="10" stroke="url(#goldA)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Star/spark at top -->
+  <circle cx="30" cy="8" r="3" fill="#F5D76E"/>
+  <!-- Text -->
+  <text x="50" y="38" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="0">Mind</text>
+  <text x="96" y="38" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#D4AF37" letter-spacing="0">Success</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="goldC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D76E"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield / crest shape -->
+  <path d="M30,10 L44,16 L44,32 C44,42 30,50 30,50 C30,50 16,42 16,32 L16,16 Z" 
+        fill="none" stroke="url(#goldC)" stroke-width="2" stroke-linejoin="round"/>
+  <!-- M letter inside shield -->
+  <text x="30" y="37" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#D4AF37" text-anchor="middle">M</text>
+  <!-- Wordmark -->
+  <text x="56" y="32" font-family="Palatino, Georgia, serif" font-size="20" font-weight="700" fill="#FFFFFF">MindSuccess</text>
+  <text x="56" y="48" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#D4AF37" letter-spacing="2.5">PROGRAM</text>
+</svg>

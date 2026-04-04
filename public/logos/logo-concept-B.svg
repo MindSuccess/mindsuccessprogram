@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="goldB" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#F5D76E"/>
+    </linearGradient>
+  </defs>
+  <!-- Infinity / brain loop icon -->
+  <path d="M15,30 C15,22 22,18 28,24 C31,27 33,33 36,33 C42,33 42,24 36,24 C33,24 31,27 28,30 C25,33 22,38 18,36 C14,34 13,30 15,30Z" 
+        fill="none" stroke="url(#goldB)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Bold wordmark -->
+  <text x="52" y="36" font-family="Arial Black, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" letter-spacing="-0.5">MIND</text>
+  <text x="52" y="52" font-family="Arial Black, sans-serif" font-size="11" font-weight="400" fill="#D4AF37" letter-spacing="3">SUCCESS</text>
+</svg>
