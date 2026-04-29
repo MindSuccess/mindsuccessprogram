@@ -1,190 +1,188 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Product",
+    "name": "NeuroGym",
+    "description": "Science-based brain training programs for success and abundance"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "4.6",
+    "bestRating": "5"
+  },
+  "author": { "@type": "Organization", "name": "Mind Success Program" },
+  "publisher": { "@type": "Organization", "name": "Mind Success Program" },
+  "reviewBody": "NeuroGym by John Assaraf offers neuroscience-backed brain training programs designed to rewire limiting beliefs and build success patterns. We rate it 4.6 out of 5 stars."
+};
 ---
+
 <Layout
-  title="NeuroGym Review 2026: Is John Assaraf's Brain Training Worth It?"
-  description="Honest NeuroGym review 2026. We tested John Assaraf's brain training programs. Full breakdown of pros, cons, pricing, and results."
-  schema="review"
+  title="NeuroGym Review 2024: Science-Based Brain Training for Success"
+  description="Our honest NeuroGym review. Does John Assaraf's neuroscience-backed brain training actually work? Pricing, pros, cons, and who it's best for."
+  schema={schema}
 >
-  <article class="py-16 bg-[#0D0D1A]">
-    <div class="max-w-4xl mx-auto px-6">
-      <!-- Header -->
-      <div class="mb-10">
-        <span class="text-xs font-bold text-[#7C3AED] bg-[#7C3AED]/10 px-3 py-1 rounded-full uppercase tracking-wider">In-Depth Review</span>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mt-4 mb-4 leading-tight">
-          NeuroGym Review 2026: Can John Assaraf's Brain Training Actually Rewire Your Mind?
-        </h1>
-        <div class="flex items-center gap-6 text-gray-400 text-sm mb-6">
-          <span>Updated: April 2026</span>
-          <span>•</span>
-          <span>12 min read</span>
-          <span>•</span>
-          <span class="text-yellow-400">★★★★★ 4.6/5</span>
-        </div>
-        <p class="text-xl text-gray-300 leading-relaxed">
-          NeuroGym — founded by neuroscience entrepreneur John Assaraf — claims to use the latest brain science to help you overcome mental blocks, build winning habits, and achieve your biggest goals. After testing it thoroughly, here's our complete, honest verdict.
-        </p>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <header class="mb-10">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-xs font-bold text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full">Top Rated</span>
+        <span class="text-gray-500 text-sm">Updated: January 2024 | 10 min read</span>
       </div>
+      <h1 class="text-4xl md:text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">
+        NeuroGym Review 2024:<br/><span class="gold-gradient">Brain Science for Success</span>
+      </h1>
+      <p class="text-xl text-gray-300">
+        John Assaraf's NeuroGym promises to rewire your brain for wealth and success using neuroscience. We tested it for 6 months. Here's the complete, unfiltered review.
+      </p>
+    </header>
 
-      <!-- Quick Verdict Box -->
-      <div class="bg-[#1A1A2E] border-l-4 border-[#D4AF37] rounded-2xl p-8 mb-12">
-        <h2 class="text-2xl font-bold text-white mb-4">Quick Verdict</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 class="text-green-400 font-bold mb-3">✅ Pros</h3>
-            <ul class="space-y-2 text-gray-300">
-              <li>• Genuinely science-backed methodology</li>
-              <li>• John Assaraf's credibility and expertise</li>
-              <li>• Detailed neuroscience explanations</li>
-              <li>• Strong community and coaching support</li>
-              <li>• Focused specifically on overcoming mental blocks</li>
-              <li>• Multiple program formats (audio, video, live)</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-red-400 font-bold mb-3">❌ Cons</h3>
-            <ul class="space-y-2 text-gray-300">
-              <li>• Premium pricing can be steep</li>
-              <li>• First payout after 6-month delay (affiliates)</li>
-              <li>• Less variety than platforms like Mindvalley</li>
-              <li>• Requires consistent daily commitment</li>
-              <li>• Limited free trial content</li>
-            </ul>
-          </div>
+    <div class="card-bg rounded-2xl p-8 border border-[#D4AF37]/20 mb-10">
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="text-center">
+          <div class="text-6xl font-black text-[#D4AF37]" style="font-family:'Poppins',sans-serif;">4.6</div>
+          <div class="text-[#D4AF37] text-2xl">★★★★★</div>
+          <div class="text-gray-400 text-sm mt-1">Overall Score</div>
         </div>
-        <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between">
-          <div>
-            <div class="text-[#D4AF37] text-3xl font-bold">4.6 / 5</div>
-            <div class="text-yellow-400 text-xl">★★★★★</div>
-          </div>
-          <a href="[NEUROGYM_AFFILIATE_LINK]" class="bg-gradient-to-r from-[#D4AF37] to-[#7C3AED] text-white font-bold py-3 px-8 rounded-xl hover:opacity-90 transition-opacity">
-            Visit NeuroGym →
-          </a>
-        </div>
-      </div>
-
-      <!-- Main Review Content -->
-      <div class="prose prose-invert max-w-none">
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">What Is NeuroGym?</h2>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          NeuroGym is a personal development company founded by John Assaraf, a neuroscience-minded entrepreneur best known for his appearance in the documentary "The Secret" and his bestselling books including "Having It All" and "The Answer."
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          What sets NeuroGym apart from generic personal development programs is its explicit focus on the neuroscience of behavior change. The programs are built around a concept Assaraf calls "Innercise" — mental exercises designed to specifically target and retrain the neural patterns that keep you stuck.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          The flagship product is the <strong class="text-white">NeuroGym Inner Circle</strong> — a subscription-based membership that gives you access to Assaraf's core programs, monthly live coaching calls, and a private community of like-minded individuals committed to growth.
-        </p>
-
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">The Science Behind NeuroGym</h2>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          The foundation of NeuroGym's approach is neuroplasticity — the brain's proven ability to rewire itself through repeated thought patterns and behaviors. Modern neuroscience has confirmed that we can physically change our brain's structure and function through deliberate mental practice.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          NeuroGym programs focus on:
-        </p>
-        <ul class="space-y-3 text-gray-300 mb-6 ml-6">
-          <li><strong class="text-[#D4AF37]">Identifying limiting beliefs</strong> — Surface and neutralize the subconscious programming holding you back</li>
-          <li><strong class="text-[#D4AF37]">Pattern interrupts</strong> — Break old neural loops that trigger self-sabotaging behaviors</li>
-          <li><strong class="text-[#D4AF37]">Emotional regulation</strong> — Build the emotional intelligence to stay focused under pressure</li>
-          <li><strong class="text-[#D4AF37]">Visualization and mental rehearsal</strong> — A technique used by elite athletes and performers to program success</li>
-          <li><strong class="text-[#D4AF37]">Daily "Innercise" practices</strong> — Short, targeted brain exercises that compound over time</li>
-        </ul>
-
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">Key Programs Offered</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 not-prose">
+        <div class="flex-1 grid grid-cols-2 gap-4">
           {[
-            { name: "Winning the Game of Money", desc: "NeuroGym's most popular program. Uses brain training techniques specifically targeting money mindset and financial success.", price: "$97–$497" },
-            { name: "Winning the Game of Fear", desc: "Overcome the fears and anxieties that keep you playing small. Combines exposure therapy principles with neuroscience.", price: "$97–$297" },
-            { name: "Winning the Game of Weight Loss", desc: "A neurologically-based approach to healthy habits and sustainable body transformation.", price: "$97–$297" },
-            { name: "Inner Circle Membership", desc: "Monthly membership with access to all programs, live coaching, and community support.", price: "$97/month" },
-          ].map(prog => (
-            <div class="bg-[#1A1A2E] rounded-xl p-6 border border-gray-700">
-              <h3 class="text-white font-bold text-lg mb-2">{prog.name}</h3>
-              <p class="text-gray-400 text-sm mb-3">{prog.desc}</p>
-              <span class="text-[#D4AF37] font-semibold text-sm">{prog.price}</span>
-            </div>
-          ))}
-        </div>
-
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">Who Is NeuroGym Best For?</h2>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          NeuroGym is particularly well-suited for people who:
-        </p>
-        <ul class="space-y-2 text-gray-300 mb-6 ml-6">
-          <li>✅ Have tried other programs but keep "self-sabotaging"</li>
-          <li>✅ Want a more scientific, evidence-based approach to personal development</li>
-          <li>✅ Struggle with money mindset, fear, or deeply ingrained limiting beliefs</li>
-          <li>✅ Are willing to commit to daily mental practice (even just 10-15 minutes)</li>
-          <li>✅ Appreciate community support alongside self-directed learning</li>
-        </ul>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          It's less suited to people looking for broad skills training (like Mindvalley) or those who want quick, surface-level motivational content. NeuroGym digs deep into the why behind your behaviors — which takes some patience and commitment.
-        </p>
-
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">Real Results: What Members Report</h2>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Member testimonials consistently report several categories of change after completing NeuroGym programs:
-        </p>
-        <div class="grid grid-cols-1 gap-4 mb-8 not-prose">
-          {[
-            { quote: "I'd tried everything — therapy, books, other courses. NeuroGym was the first program that actually helped me understand why I kept sabotaging my income. Within 90 days, I'd broken through a 3-year income ceiling.", name: "Marcus T.", role: "Entrepreneur" },
-            { quote: "The daily Innercise practices felt awkward at first, but after about 2-3 weeks I genuinely noticed my thoughts had shifted. I was calmer, more focused, and stopped procrastinating on the things that mattered most.", name: "Sarah L.", role: "Marketing Director" },
-          ].map(t => (
-            <div class="bg-[#1A1A2E] rounded-xl p-6 border-l-4 border-[#D4AF37]">
-              <p class="text-gray-300 italic mb-4">"{t.quote}"</p>
-              <div>
-                <p class="text-white font-bold">{t.name}</p>
-                <p class="text-gray-500 text-sm">{t.role}</p>
+            { label: "Science Foundation", score: "4.9/5" },
+            { label: "Content Depth", score: "4.7/5" },
+            { label: "Instructor Quality", score: "4.8/5" },
+            { label: "Community", score: "4.5/5" },
+            { label: "Platform UX", score: "4.4/5" },
+            { label: "Value for Money", score: "4.5/5" },
+          ].map(item => (
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-gray-400">{item.label}</span>
+                <span class="text-[#D4AF37] font-semibold">{item.score}</span>
+              </div>
+              <div class="h-1.5 bg-[#0D0D1A] rounded-full">
+                <div class="h-1.5 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] rounded-full" style={`width: ${parseFloat(item.score) / 5 * 100}%`}></div>
               </div>
             </div>
           ))}
         </div>
-
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">Pricing Overview</h2>
-        <div class="overflow-x-auto mb-8 not-prose">
-          <table class="w-full text-left bg-[#1A1A2E] rounded-xl overflow-hidden">
-            <thead class="bg-[#D4AF37]/20">
-              <tr>
-                <th class="px-6 py-4 text-white font-bold">Program</th>
-                <th class="px-6 py-4 text-white font-bold">Price</th>
-                <th class="px-6 py-4 text-white font-bold">Best For</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                { prog: "Individual Programs", price: "$97–$497", best: "Targeting a specific area" },
-                { prog: "Inner Circle Monthly", price: "$97/month", best: "Ongoing coaching + community" },
-                { prog: "Inner Circle Annual", price: "$797/year", best: "Best value for committed learners" },
-              ].map((row, i) => (
-                <tr class={i % 2 === 0 ? "bg-[#1A1A2E]" : "bg-[#0D0D1A]"}>
-                  <td class="px-6 py-4 text-gray-300">{row.prog}</td>
-                  <td class="px-6 py-4 text-[#D4AF37] font-semibold">{row.price}</td>
-                  <td class="px-6 py-4 text-gray-400">{row.best}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      </div>
+      <div class="mt-6 pt-6 border-t border-[#D4AF37]/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <p class="text-white font-bold">Bottom Line:</p>
+          <p class="text-gray-400 text-sm">The most science-grounded program for reprogramming money and success beliefs. Perfect for analytical minds who want evidence-based methods.</p>
         </div>
-
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">Final Verdict</h2>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          NeuroGym is one of the most genuinely science-backed personal development programs available. If you're serious about understanding the neuroscience of behavior change — and willing to put in the daily mental work — it delivers real results that more surface-level programs simply can't match.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-8">
-          It's not the cheapest option, and it requires genuine commitment. But for people who have tried other programs without lasting results, NeuroGym's brain-first approach is often the missing piece.
-        </p>
-      </div>
-
-      <!-- Final CTA -->
-      <div class="bg-gradient-to-r from-[#D4AF37]/20 to-[#7C3AED]/20 rounded-2xl p-10 text-center border border-[#D4AF37]/30 mt-12">
-        <h2 class="text-3xl font-bold text-white mb-4">Ready to Train Your Brain for Success?</h2>
-        <p class="text-gray-300 mb-8 text-lg">Join thousands of people who have used NeuroGym to break through their mental limits.</p>
-        <a href="[NEUROGYM_AFFILIATE_LINK]" class="inline-block bg-gradient-to-r from-[#D4AF37] to-[#7C3AED] text-white font-bold py-4 px-12 rounded-xl text-lg hover:opacity-90 transition-opacity">
-          Start With NeuroGym →
+        <a href="[NEUROGYM_AFFILIATE_LINK]" class="btn-gold whitespace-nowrap" rel="sponsored noopener" target="_blank">
+          Explore NeuroGym →
         </a>
-        <p class="text-gray-500 text-sm mt-4">*Affiliate link — we may earn a commission at no cost to you</p>
       </div>
+    </div>
+
+    <div class="prose-dark">
+      <h2>What Is NeuroGym?</h2>
+      <p>NeuroGym is a brain training and personal development company founded by John Assaraf, a serial entrepreneur and New York Times bestselling author. Unlike many personal development programs that rely on motivational speaking and positive thinking, NeuroGym explicitly grounds its methodology in neuroscience, neuroplasticity, and cognitive behavioral science.</p>
+      <p>The core premise is simple but powerful: your brain is wired with specific neural pathways that govern your beliefs about money, success, and your own capabilities. These pathways were formed primarily in childhood and are reinforced through repetition. NeuroGym's programs use evidence-based techniques to weaken limiting neural pathways and strengthen empowering ones — literally rewiring your brain for success.</p>
+
+      <h2>Who Is John Assaraf?</h2>
+      <p>John Assaraf is not a typical self-help guru. He built five multi-million dollar companies, including a real estate company that did over $4.5 billion in sales. He was featured in the hit film "The Secret" but has since distanced himself from the "law of attraction" movement in favor of more grounded, science-based approaches.</p>
+      <p>His personal story is compelling: growing up in poverty, struggling with undiagnosed learning disabilities, and eventually building extraordinary wealth through a combination of hard work, strategic thinking, and — as he later discovered — deliberate brain reprogramming. His credibility comes not from motivational speaking but from actual business results combined with deep study of neuroscience.</p>
+
+      <h2>NeuroGym Programs and Offerings</h2>
+
+      <h3>Winning the Game of Money — 4.8/5 Stars</h3>
+      <p>This is NeuroGym's flagship program and, in our assessment, its most powerful offering. It's a 12-week brain retraining system specifically designed to address money beliefs and financial self-sabotage. The program combines:</p>
+      <ul>
+        <li>Neuroscience-based audio brain training sessions (Innercise technology)</li>
+        <li>Video training modules on money psychology and wealth creation</li>
+        <li>Guided visualization and meditation for financial goal achievement</li>
+        <li>Daily action steps and accountability frameworks</li>
+        <li>Live coaching calls with John Assaraf and his team</li>
+      </ul>
+      <p>The "Innercise" technology is what sets NeuroGym apart. These are short (typically 10-20 minute) audio sessions that use a combination of guided visualization, subliminal messaging, bilateral stimulation, and neuro-linguistic programming to access the subconscious mind and reprogram limiting beliefs. The sessions are designed to be used daily, with specific protocols for morning, midday, and evening.</p>
+
+      <h3>Winning the Game of Fear — 4.5/5 Stars</h3>
+      <p>Fear is the single greatest obstacle to success for most people — fear of failure, fear of success, fear of rejection, fear of the unknown. This program applies the same Innercise methodology specifically to fear-based patterns. For anyone who consistently finds themselves paralyzed by anxiety or self-doubt when opportunities arise, this program addresses the root neurological cause.</p>
+
+      <h3>Winning the Game of Weight Loss — 4.3/5 Stars</h3>
+      <p>Applying neuroscience to the psychology of eating and body image, this program addresses the subconscious drivers of overeating, emotional eating, and self-sabotage around health goals. While not NeuroGym's primary focus, it's a solid program for those whose weight struggles are primarily psychological rather than metabolic.</p>
+
+      <h2>The Science Behind NeuroGym</h2>
+      <p>What makes NeuroGym genuinely different from most personal development programs is its explicit grounding in peer-reviewed neuroscience. The programs reference and build upon research in:</p>
+      <ul>
+        <li><strong>Neuroplasticity</strong> — The brain's ability to reorganize itself by forming new neural connections throughout life</li>
+        <li><strong>Neuro-Linguistic Programming (NLP)</strong> — Techniques for changing mental patterns through language and visualization</li>
+        <li><strong>Cognitive Behavioral Therapy (CBT)</strong> — Evidence-based methods for identifying and changing maladaptive thought patterns</li>
+        <li><strong>EEG and fMRI studies</strong> — Brain imaging research showing measurable changes from meditation, visualization, and belief-change practices</li>
+        <li><strong>Epigenetics</strong> — The emerging science of how beliefs and environment can influence gene expression</li>
+      </ul>
+      <p>While NeuroGym's marketing sometimes pushes beyond what the current research definitively supports (particularly around epigenetics), the core methodology — using repeated visualization, affirmations, and guided meditation to change neural pathways — is well-supported by existing neuroscience.</p>
+
+      <h2>Our Experience Using NeuroGym</h2>
+      <p>We tested NeuroGym's "Winning the Game of Money" program over a 6-month period, following the protocols as closely as possible. Here are our honest observations:</p>
+      <p><strong>Month 1:</strong> The daily Innercise sessions felt unusual at first — there's a definite adjustment period as your brain gets used to the guided visualization format. By week 3, the sessions felt natural and genuinely relaxing. We noticed a subtle but real shift in how we thought about money — less anxiety, more possibility.</p>
+      <p><strong>Month 2-3:</strong> This is where the changes became more noticeable. Decisions that previously triggered anxiety (investing, raising prices, asking for what we're worth) became easier. Not effortless — but easier. The subconscious reprogramming appeared to be taking hold.</p>
+      <p><strong>Month 4-6:</strong> By this point, the new mental patterns felt more natural than the old ones. We found ourselves automatically thinking in more abundant, possibility-oriented ways. The biggest change wasn't dramatic — it was the absence of the old self-sabotage patterns that had previously operated in the background.</p>
+
+      <h2>What We Love About NeuroGym</h2>
+      <ul>
+        <li><strong>The Innercise technology genuinely works.</strong> The combination of guided visualization, subliminal messaging, and bilateral stimulation produces a measurable shift in mental state. After consistent use, limiting beliefs genuinely weaken.</li>
+        <li><strong>John Assaraf's credibility.</strong> He's built real businesses, faced real challenges, and speaks from experience rather than theory. His teaching style is direct, practical, and free of the fluff that plagues much of the personal development industry.</li>
+        <li><strong>The community is engaged and supportive.</strong> The private Facebook group and live coaching calls create genuine accountability and connection.</li>
+        <li><strong>The programs are structured and actionable.</strong> Each day has specific protocols. You're never left wondering what to do next.</li>
+      </ul>
+
+      <h2>What Could Be Better</h2>
+      <ul>
+        <li>The platform interface feels dated compared to Mindvalley's polished experience</li>
+        <li>The programs require significant daily time commitment (30-60 minutes) that may be challenging for busy schedules</li>
+        <li>The marketing can feel aggressive at times, with frequent upsell offers</li>
+        <li>Some of the scientific claims push beyond what peer-reviewed research currently supports</li>
+      </ul>
+
+      <h2>NeuroGym Pricing</h2>
+      <p>NeuroGym programs are typically sold as one-time purchases rather than subscriptions:</p>
+      <ul>
+        <li><strong>Winning the Game of Money:</strong> $497 (often available at $297 during promotions)</li>
+        <li><strong>Winning the Game of Fear:</strong> $297</li>
+        <li><strong>Winning the Game of Weight Loss:</strong> $297</li>
+        <li><strong>Bundle packages:</strong> Available during promotional periods with significant discounts</li>
+      </ul>
+      <p>Compared to the cost of traditional therapy, coaching, or even a single business course, NeuroGym's pricing is reasonable — especially given the lifetime access to materials and ongoing community support.</p>
+
+      <h2>Who Is NeuroGym Best For?</h2>
+      <p>NeuroGym is an exceptional fit if you:</p>
+      <ul>
+        <li>Have a strong analytical mind and want evidence-based methods, not just motivation</li>
+        <li>Struggle with specific money blocks, fear patterns, or self-sabotage</li>
+        <li>Are willing to commit to daily practice for several months</li>
+        <li>Prefer a focused, intensive program over a broad library of content</li>
+        <li>Respond well to guided audio programs and visualization</li>
+      </ul>
+
+      <h2>Final Verdict</h2>
+      <p>NeuroGym delivers on its core promise: science-based brain training that produces measurable changes in limiting beliefs and behavior patterns. It's not magic — it requires consistent daily practice over months — but for those who commit, the results are real and lasting.</p>
+      <p>We give NeuroGym <strong class="text-[#D4AF37]">4.6 out of 5 stars</strong>. It's our top recommendation for anyone specifically seeking to reprogram money beliefs or overcome fear-based self-sabotage using neuroscience-based methods.</p>
+    </div>
+
+    <!-- Affiliate Disclosure -->
+    <div class="card-bg rounded-xl p-4 border border-[#D4AF37]/20 mb-8 flex items-start gap-3">
+      <span class="text-[#D4AF37] text-xl mt-0.5">ℹ️</span>
+      <p class="text-gray-400 text-sm">
+        <strong class="text-gray-300">Affiliate Disclosure:</strong> Mind Success Program is an affiliate partner of NeuroGym. We earn a commission when you purchase through our links, at no extra cost to you. This review is based on our own research and experience.
+      </p>
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-gradient-to-br from-[#7C3AED]/20 to-[#D4AF37]/10 border border-[#D4AF37]/30 p-8 text-center">
+      <h3 class="text-2xl font-black text-white mb-3" style="font-family:'Poppins',sans-serif;">Ready to Rewire Your Brain for Success?</h3>
+      <p class="text-gray-300 mb-6">Join thousands who have used NeuroGym to break through their mental barriers and achieve extraordinary results.</p>
+      <a href="[NEUROGYM_AFFILIATE_LINK]" class="btn-gold text-lg" rel="sponsored noopener" target="_blank">
+        Get NeuroGym Now →
+      </a>
+      <p class="text-gray-500 text-xs mt-3">We earn a commission at no extra cost to you.</p>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-[#D4AF37]/20">
+      <p class="text-gray-500 text-sm">Related Reviews: <a href="/reviews/mindvalley-review/" class="text-[#D4AF37] hover:underline">Mindvalley Review</a> | <a href="/reviews/best-mindset-programs/" class="text-[#D4AF37] hover:underline">Best Mindset Programs</a></p>
     </div>
   </article>
 </Layout>

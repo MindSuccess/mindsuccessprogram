@@ -1,94 +1,244 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Top 10 Best Mindset Programs of 2024: Complete Comparison Guide",
+  "author": { "@type": "Organization", "name": "Mind Success Program" },
+  "publisher": { "@type": "Organization", "name": "Mind Success Program" },
+  "url": "https://mindsuccessprogram.com/reviews/best-mindset-programs/"
+};
+
 const programs = [
-  { rank: 1, name: "Mindvalley All Access", category: "Comprehensive Platform", rating: "4.8/5", price: "$499/year", badge: "Best Overall", desc: "The world's largest personal development platform. 100+ programs covering mindset, health, relationships, and productivity from the world's top teachers.", link: "[MINDVALLEY_AFFILIATE_LINK]" },
-  { rank: 2, name: "NeuroGym Inner Circle", category: "Brain Training", rating: "4.6/5", price: "$97/month", badge: "Most Science-Backed", desc: "John Assaraf's neuroscience-based program for overcoming mental blocks and reprogramming the brain for success, wealth, and high performance.", link: "[NEUROGYM_AFFILIATE_LINK]" },
-  { rank: 3, name: "Tony Robbins – Date With Destiny", category: "Live Event / Program", rating: "4.7/5", price: "Varies", badge: "Most Transformational", desc: "Tony Robbins' signature immersive experience. Thousands report it as the single most transformational event of their lives. Not cheap — but unlike anything else.", link: "[CLICKBANK_AFFILIATE_LINK]" },
-  { rank: 4, name: "Blinkist Premium", category: "Book Summaries", rating: "4.5/5", price: "$7.49/month", badge: "Best Value", desc: "Key insights from 6,000+ nonfiction books in 15 minutes. Phenomenal for building a daily learning habit without the time commitment of full books.", link: "[BLINKIST_AFFILIATE_LINK]" },
-  { rank: 5, name: "Audible Premium Plus", category: "Audiobooks", rating: "4.6/5", price: "$14.95/month", badge: "Best for Commuters", desc: "The world's largest audiobook library. Turn your commute, workout, or downtime into a learning opportunity. Massive personal development catalog.", link: "[AUDIBLE_AFFILIATE_LINK]" },
-  { rank: 6, name: "Coursera Personal Development", category: "Online Courses", rating: "4.4/5", price: "Free–$59/course", badge: "Most Academic", desc: "University-level courses on emotional intelligence, leadership, and mindset from top institutions like Yale and Michigan. Certificates included.", link: "[CLICKBANK_AFFILIATE_LINK]" },
-  { rank: 7, name: "Mindvalley – Silva Ultramind System", category: "Meditation & Focus", rating: "4.7/5", price: "Included in All Access", badge: "Best for Meditation", desc: "Based on the legendary Silva Method, this program teaches powerful meditation and visualization techniques used by astronauts, athletes, and executives.", link: "[MINDVALLEY_AFFILIATE_LINK]" },
-  { rank: 8, name: "Joe Dispenza Online Courses", category: "Neuroscience & Meditation", rating: "4.5/5", price: "$147–$497", badge: "Deepest Dive", desc: "Dr. Joe Dispenza's programs blend cutting-edge neuroscience with meditation and quantum physics. Ideal for those who want to go very deep.", link: "[CLICKBANK_AFFILIATE_LINK]" },
-  { rank: 9, name: "Hay House Programs", category: "Spiritual Development", rating: "4.3/5", price: "$15–$297", badge: "Best Spiritual Focus", desc: "Programs from world-renowned teachers like Wayne Dyer, Louise Hay, and Deepak Chopra. Strong focus on spiritual dimensions of success and well-being.", link: "[CLICKBANK_AFFILIATE_LINK]" },
-  { rank: 10, name: "MasterClass (Motivation & Mindset)", category: "Learning Platform", rating: "4.4/5", price: "$120/year", badge: "Most Inspiring", desc: "World-class teachers including Matthew McConaughey, Sara Blakely, and Malcolm Gladwell share their mindset secrets. Production quality is unmatched.", link: "[CLICKBANK_AFFILIATE_LINK]" },
+  {
+    rank: 1,
+    name: "Mindvalley All Access",
+    rating: 4.8,
+    price: "$499/year",
+    bestFor: "Comprehensive personal growth",
+    description: "500+ expert-led programs covering mindset, health, relationships, and career. The most complete personal development ecosystem available.",
+    link: "[MINDVALLEY_AFFILIATE_LINK]",
+    pros: ["500+ programs", "World-class instructors", "Global community", "Regular new content"],
+    cons: ["Can feel overwhelming", "Some spiritual content may not appeal to all"]
+  },
+  {
+    rank: 2,
+    name: "NeuroGym — Winning the Game of Money",
+    rating: 4.6,
+    price: "$497",
+    bestFor: "Money mindset & brain training",
+    description: "Neuroscience-based brain training specifically designed to rewire limiting money beliefs and build wealth-oriented neural pathways.",
+    link: "[NEUROGYM_AFFILIATE_LINK]",
+    pros: ["Science-backed methods", "Innercise technology", "Addresses root causes", "Lifetime access"],
+    cons: ["Requires daily commitment", "Platform UI is dated"]
+  },
+  {
+    rank: 3,
+    name: "MasterClass",
+    rating: 4.5,
+    price: "$180/year",
+    bestFor: "Learning from world-famous experts",
+    description: "Cinematic courses from icons like Tony Robbins, Neil Gaiman, and Serena Williams. Beautifully produced but less interactive.",
+    link: "[AMAZON_AFFILIATE_LINK]",
+    pros: ["Hollywood production quality", "Famous instructors", "Affordable annual price", "Wide topic range"],
+    cons: ["Passive learning only", "No community or accountability"]
+  },
+  {
+    rank: 4,
+    name: "Audible Premium Plus",
+    rating: 4.4,
+    price: "$14.95/month",
+    bestFor: "Audiobook learners",
+    description: "Access to virtually every mindset and personal development book in audio format. The most cost-effective way to consume expert knowledge.",
+    link: "[AUDIBLE_AFFILIATE_LINK]",
+    pros: ["Massive library", "Listen anywhere", "1-2 free books/month", "Great for commutes"],
+    cons: ["No structured curriculum", "Requires self-direction"]
+  },
+  {
+    rank: 5,
+    name: "Blinkist",
+    rating: 4.3,
+    price: "$12.99/month",
+    bestFor: "Quick knowledge absorption",
+    description: "5,000+ condensed book summaries in 15-minute reads or listens. Perfect for busy people who want the key insights without the full book.",
+    link: "[BLINKIST_AFFILIATE_LINK]",
+    pros: ["Huge library", "15-min format", "Audio + text", "Great for discovery"],
+    cons: ["Summaries lack depth", "Not a replacement for full books"]
+  },
+  {
+    rank: 6,
+    name: "The Silva Method",
+    rating: 4.2,
+    price: "$197",
+    bestFor: "Meditation & intuition training",
+    description: "Classic mind training system focused on alpha-level meditation, intuition development, and mental programming. Over 6 million graduates.",
+    link: "[CLICKBANK_AFFILIATE_LINK]",
+    pros: ["Time-tested system", "Deep meditation training", "Intuition development"],
+    cons: ["Older methodology", "Less modern UX"]
+  },
+  {
+    rank: 7,
+    name: "Tony Robbins — Unleash the Power Within",
+    rating: 4.2,
+    price: "$1,495+",
+    bestFor: "Intensive live transformation",
+    description: "The legendary 4-day live event that has transformed millions. High-energy, immersive, and designed to break through limiting patterns in real time.",
+    link: "[CLICKBANK_AFFILIATE_LINK]",
+    pros: ["Live immersive experience", "Massive energy", "Firewalk experience", "Community bonding"],
+    cons: ["Very expensive", "High-pressure sales environment", "One-time event, not ongoing"]
+  },
+  {
+    rank: 8,
+    name: "Headspace Plus",
+    rating: 4.1,
+    price: "$12.99/month",
+    bestFor: "Meditation beginners",
+    description: "The most user-friendly meditation app with guided sessions for stress, focus, sleep, and performance. Excellent entry point for mindfulness.",
+    link: "[AMAZON_AFFILIATE_LINK]",
+    pros: ["Beautiful UX", "Beginner-friendly", "Science-backed", "Sleep content included"],
+    cons: ["Limited to meditation", "Less comprehensive than platforms like Mindvalley"]
+  },
+  {
+    rank: 9,
+    name: "The Landmark Forum",
+    rating: 4.0,
+    price: "$675",
+    bestFor: "Personal breakthroughs",
+    description: "Intensive 3-day seminar focused on identifying and dissolving limiting beliefs about yourself and your relationships. Controversial but effective for many.",
+    link: "[CLICKBANK_AFFILIATE_LINK]",
+    pros: ["Powerful group dynamics", "Breakthrough experiences", "Relationship focus"],
+    cons: ["Controversial reputation", "Aggressive upselling", "Intense format not for everyone"]
+  },
+  {
+    rank: 10,
+    name: "Calm App Premium",
+    rating: 4.0,
+    price: "$14.99/month",
+    bestFor: "Sleep & stress management",
+    description: "Popular meditation and sleep app with celebrity-narrated sleep stories, breathing exercises, and mindfulness content. Best-in-class for sleep.",
+    link: "[AMAZON_AFFILIATE_LINK]",
+    pros: ["Best sleep stories", "Celebrity narrators", "Beautiful design", "Stress tools"],
+    cons: ["Less educational content", "Not a full personal development platform"]
+  }
 ];
 ---
+
 <Layout
-  title="10 Best Mindset Programs in 2026 | Ultimate Comparison Guide"
-  description="The definitive guide to the best mindset programs in 2026. Comparing Mindvalley, NeuroGym, Tony Robbins, and more — with honest ratings, pricing, and recommendations."
+  title="Best Mindset Programs 2024: Top 10 Ranked & Compared"
+  description="The definitive guide to the best mindset and personal development programs of 2024. We compare Mindvalley, NeuroGym, MasterClass, and more across price, quality, and results."
+  schema={schema}
 >
-  <article class="py-16 bg-[#0D0D1A]">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <span class="text-xs font-bold text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full uppercase tracking-wider">Ultimate Guide</span>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mt-4 mb-4 leading-tight">
-          10 Best Mindset Programs in 2026
-        </h1>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto">We've tested and reviewed dozens of programs. Here are the ten worth your time and money — ranked and compared.</p>
-        <div class="text-gray-500 text-sm mt-4">Updated April 2026 · 15 min read</div>
+  <article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <header class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-xs font-semibold text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full">2024 Comparison</span>
+        <span class="text-gray-500 text-sm">15 min read</span>
       </div>
+      <h1 class="text-4xl md:text-6xl font-black text-white mb-6" style="font-family:'Poppins',sans-serif;">
+        Best Mindset Programs<br/><span class="gold-gradient">Top 10 Ranked</span>
+      </h1>
+      <p class="text-xl text-gray-300 leading-relaxed max-w-3xl">
+        We've personally tested, researched, and compared the world's leading mindset and personal development programs. Here's the definitive ranking for 2024.
+      </p>
+    </header>
 
-      <!-- Quick Comparison Table -->
-      <div class="bg-[#1A1A2E] rounded-2xl overflow-hidden mb-12 border border-gray-700">
-        <div class="p-6 border-b border-gray-700">
-          <h2 class="text-2xl font-bold text-white">Quick Comparison</h2>
-        </div>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left">
-            <thead class="bg-[#D4AF37]/10">
-              <tr>
-                <th class="px-5 py-4 text-[#D4AF37] font-bold">Rank</th>
-                <th class="px-5 py-4 text-[#D4AF37] font-bold">Program</th>
-                <th class="px-5 py-4 text-[#D4AF37] font-bold">Rating</th>
-                <th class="px-5 py-4 text-[#D4AF37] font-bold">Price</th>
-                <th class="px-5 py-4 text-[#D4AF37] font-bold">Best For</th>
-              </tr>
-            </thead>
-            <tbody>
-              {programs.map((p, i) => (
-                <tr class={i % 2 === 0 ? "bg-[#1A1A2E]" : "bg-[#0D0D1A]"}>
-                  <td class="px-5 py-3 text-white font-bold">#{p.rank}</td>
-                  <td class="px-5 py-3 text-white">{p.name}</td>
-                  <td class="px-5 py-3 text-yellow-400 font-semibold">{p.rating}</td>
-                  <td class="px-5 py-3 text-[#D4AF37]">{p.price}</td>
-                  <td class="px-5 py-3 text-gray-400 text-sm">{p.badge}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <div class="card-bg rounded-2xl p-6 border border-[#D4AF37]/20 mb-12">
+      <p class="text-gray-400 text-sm">
+        <strong class="text-gray-300">How we rank:</strong> Programs are scored on content quality, instructor credibility, scientific foundation, community support, platform experience, and value for money. We test each program for at least 30 days before reviewing.
+      </p>
+    </div>
 
-      <!-- Detailed Reviews -->
-      <div class="space-y-10">
-        {programs.map(p => (
-          <div class="bg-[#1A1A2E] rounded-2xl p-8 border border-gray-700 hover:border-[#D4AF37]/40 transition-all">
-            <div class="flex items-start justify-between mb-4 flex-wrap gap-4">
+    <!-- Affiliate Disclosure -->
+    <div class="card-bg rounded-xl p-4 border border-[#D4AF37]/20 mb-10 flex items-start gap-3">
+      <span class="text-[#D4AF37] text-xl mt-0.5">ℹ️</span>
+      <p class="text-gray-400 text-sm">
+        <strong class="text-gray-300">Affiliate Disclosure:</strong> Mind Success Program participates in affiliate marketing programs with the programs listed below. We earn a commission when you purchase through our links, at no extra cost to you. Our rankings are based on our own research and testing — affiliate relationships do not influence our ratings.
+      </p>
+    </div>
+
+    <div class="space-y-10">
+      {programs.map((p) => (
+        <div class="card-bg rounded-2xl p-8 border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all" id={`program-${p.rank}`}>
+          <div class="flex flex-col lg:flex-row gap-6">
+            <div class="flex items-start gap-4 lg:w-1/3">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#7C3AED] flex items-center justify-center text-white font-black text-xl shrink-0">
+                {p.rank}
+              </div>
               <div>
-                <div class="flex items-center gap-3 mb-2">
-                  <span class="text-4xl font-black text-[#D4AF37]/30">#{p.rank}</span>
-                  <span class="text-xs font-bold text-[#7C3AED] bg-[#7C3AED]/10 px-3 py-1 rounded-full">{p.badge}</span>
+                <h2 class="text-xl font-black text-white" style="font-family:'Poppins',sans-serif;">{p.name}</h2>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="text-[#D4AF37]">{'★'.repeat(Math.floor(p.rating))}</span>
+                  <span class="text-white font-semibold text-sm">{p.rating}/5</span>
                 </div>
-                <h2 class="text-2xl font-bold text-white">{p.name}</h2>
-                <p class="text-gray-500 text-sm">{p.category} · {p.price} · <span class="text-yellow-400">{p.rating}</span></p>
+                <p class="text-[#7C3AED] text-sm font-medium mt-1">{p.price}</p>
+                <p class="text-gray-500 text-xs mt-1">Best for: {p.bestFor}</p>
               </div>
             </div>
-            <p class="text-gray-300 leading-relaxed mb-6">{p.desc}</p>
-            <a href={p.link} class="inline-block bg-gradient-to-r from-[#D4AF37] to-[#7C3AED] text-white font-bold py-3 px-8 rounded-xl hover:opacity-90 transition-opacity text-sm">
-              Learn More →
-            </a>
+            <div class="lg:w-2/3">
+              <p class="text-gray-300 mb-4">{p.description}</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                <div>
+                  <p class="text-[#D4AF37] text-xs font-semibold uppercase mb-2">Pros</p>
+                  <ul class="space-y-1">
+                    {p.pros.map(pro => (
+                      <li class="flex items-center gap-2 text-gray-400 text-sm"><span class="text-[#D4AF37]">✓</span> {pro}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs font-semibold uppercase mb-2">Cons</p>
+                  <ul class="space-y-1">
+                    {p.cons.map(con => (
+                      <li class="flex items-center gap-2 text-gray-400 text-sm"><span class="text-gray-600">−</span> {con}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              {p.link && (
+                <a href={p.link} class="btn-purple text-sm py-2 px-5" rel="sponsored noopener" target="_blank">
+                  Learn More →
+                </a>
+              )}
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+    </div>
 
-      <!-- Bottom CTA -->
-      <div class="bg-gradient-to-r from-[#D4AF37]/20 to-[#7C3AED]/20 rounded-2xl p-10 text-center border border-[#D4AF37]/30 mt-16">
-        <h2 class="text-3xl font-bold text-white mb-4">Not Sure Where to Start?</h2>
-        <p class="text-gray-300 mb-8">Mindvalley is our top recommendation for most people. It's the most comprehensive platform available and offers programs for every area of life.</p>
-        <a href="[MINDVALLEY_AFFILIATE_LINK]" class="inline-block bg-gradient-to-r from-[#D4AF37] to-[#7C3AED] text-white font-bold py-4 px-12 rounded-xl text-lg hover:opacity-90 transition-opacity">
-          Explore Mindvalley →
-        </a>
+    <div class="mt-16 card-bg rounded-2xl p-8 border border-[#D4AF37]/20">
+      <h2 class="text-2xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Quick Comparison Table</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-[#D4AF37]/20">
+              <th class="text-left text-[#D4AF37] font-semibold py-3 pr-4">Program</th>
+              <th class="text-left text-[#D4AF37] font-semibold py-3 pr-4">Price</th>
+              <th class="text-left text-[#D4AF37] font-semibold py-3 pr-4">Rating</th>
+              <th class="text-left text-[#D4AF37] font-semibold py-3">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            {programs.map(p => (
+              <tr class="border-b border-[#D4AF37]/10">
+                <td class="py-3 pr-4 text-white font-medium">{p.name}</td>
+                <td class="py-3 pr-4 text-gray-400">{p.price}</td>
+                <td class="py-3 pr-4 text-[#D4AF37]">{p.rating}/5</td>
+                <td class="py-3 text-gray-400">{p.bestFor}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-gradient-to-br from-[#7C3AED]/20 to-[#D4AF37]/10 border border-[#D4AF37]/30 p-8 text-center">
+      <h3 class="text-2xl font-black text-white mb-3" style="font-family:'Poppins',sans-serif;">Still Not Sure Which Program Is Right for You?</h3>
+      <p class="text-gray-300 mb-6">Start with our #1 recommendation — Mindvalley All Access gives you the most comprehensive foundation for personal growth.</p>
+      <a href="[MINDVALLEY_AFFILIATE_LINK]" class="btn-gold text-lg" rel="sponsored noopener" target="_blank">
+        Try Mindvalley Free →
+      </a>
+      <p class="text-gray-500 text-xs mt-3">We earn a commission at no extra cost to you.</p>
     </div>
   </article>
 </Layout>

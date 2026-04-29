@@ -1,78 +1,135 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Mind Success Program",
+  "url": "https://mindsuccessprogram.com/contact/",
+  "description": "Get in touch with the Mind Success Program team. Questions, feedback, partnership inquiries, or just want to say hello? We'd love to hear from you."
+};
 ---
+
 <Layout
-  title="Contact Mind Success Program | Get In Touch"
-  description="Have a question, partnership inquiry, or feedback? Contact the Mind Success Program team — we'd love to hear from you."
+  title="Contact Us — Mind Success Program"
+  description="Have a question, feedback, or partnership inquiry? Reach out to the Mind Success Program team. We read every message and respond as quickly as possible."
+  schema={schema}
 >
-  <section class="py-24 bg-gradient-to-br from-[#0D0D1A] via-[#1A1A2E] to-[#0D0D1A]">
-    <div class="max-w-2xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <h1 class="text-5xl font-bold text-white mb-4">Get In <span class="text-[#D4AF37]">Touch</span></h1>
-        <p class="text-gray-300 text-lg">Questions, partnerships, or feedback — we read every message.</p>
+  <section class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <p class="text-[#D4AF37] font-semibold uppercase tracking-widest mb-3 text-sm">Get In Touch</p>
+      <h1 class="text-5xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Contact Us</h1>
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+        Have a question, feedback, or just want to say hello? We'd love to hear from you. We read every message and respond as quickly as we can.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-6" style="font-family:'Poppins',sans-serif;">Ways to Reach Us</h2>
+
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-lg shrink-0">📧</div>
+            <div>
+              <h3 class="text-white font-semibold mb-1">Email</h3>
+              <p class="text-gray-400 text-sm">support@mindsuccessprogram.com</p>
+              <p class="text-gray-500 text-xs mt-1">We typically respond within 24-48 hours.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-lg shrink-0">💬</div>
+            <div>
+              <h3 class="text-white font-semibold mb-1">General Inquiries</h3>
+              <p class="text-gray-400 text-sm">Questions about our content, program recommendations, or general feedback.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-lg shrink-0">🤝</div>
+            <div>
+              <h3 class="text-white font-semibold mb-1">Partnerships</h3>
+              <p class="text-gray-400 text-sm">Interested in partnering with Mind Success Program? We'd love to explore opportunities.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-lg shrink-0">📰</div>
+            <div>
+              <h3 class="text-white font-semibold mb-1">Media & Press</h3>
+              <p class="text-gray-400 text-sm">For media inquiries, interviews, or press-related requests.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-[#D4AF37]/20">
+          <h3 class="text-white font-semibold mb-3">Response Times</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li>General inquiries: 24-48 hours</li>
+            <li>Partnership requests: 2-3 business days</li>
+            <li>Media inquiries: 1-2 business days</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="bg-[#1A1A2E] rounded-2xl p-10 border border-[#D4AF37]/20">
-        <form action="mailto:contact@mindsuccessprogram.com" method="post" enctype="text/plain" class="space-y-6">
+      <!-- Contact Form -->
+      <div class="card-bg rounded-2xl p-8 border border-[#D4AF37]/20">
+        <h2 class="text-2xl font-bold text-white mb-6" style="font-family:'Poppins',sans-serif;">Send a Message</h2>
+        <form class="space-y-5">
           <div>
-            <label for="name" class="block text-white font-medium mb-2">Your Name</label>
+            <label for="name" class="block text-gray-300 text-sm font-medium mb-2">Your Name</label>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Jane Smith"
-              class="w-full bg-[#0D0D1A] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] transition-colors"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-[#0D0D1A] border border-[#D4AF37]/20 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] text-sm"
+              placeholder="John Doe"
             />
           </div>
           <div>
-            <label for="email" class="block text-white font-medium mb-2">Email Address</label>
+            <label for="email" class="block text-gray-300 text-sm font-medium mb-2">Email Address</label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="jane@example.com"
-              class="w-full bg-[#0D0D1A] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] transition-colors"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-[#0D0D1A] border border-[#D4AF37]/20 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] text-sm"
+              placeholder="john@example.com"
             />
           </div>
           <div>
-            <label for="subject" class="block text-white font-medium mb-2">Subject</label>
+            <label for="subject" class="block text-gray-300 text-sm font-medium mb-2">Subject</label>
             <select
               id="subject"
               name="subject"
-              class="w-full bg-[#0D0D1A] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors"
+              class="w-full px-4 py-3 rounded-lg bg-[#0D0D1A] border border-[#D4AF37]/20 text-white focus:outline-none focus:border-[#D4AF37] text-sm"
             >
-              <option value="">Select a topic...</option>
-              <option value="general">General Question</option>
-              <option value="review">Program Review Request</option>
-              <option value="partnership">Partnership / Affiliate</option>
-              <option value="feedback">Site Feedback</option>
+              <option value="general">General Inquiry</option>
+              <option value="feedback">Content Feedback</option>
+              <option value="partnership">Partnership Opportunity</option>
+              <option value="media">Media / Press</option>
               <option value="other">Other</option>
             </select>
           </div>
           <div>
-            <label for="message" class="block text-white font-medium mb-2">Message</label>
+            <label for="message" class="block text-gray-300 text-sm font-medium mb-2">Message</label>
             <textarea
               id="message"
               name="message"
-              rows="6"
-              placeholder="Tell us how we can help..."
-              class="w-full bg-[#0D0D1A] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] transition-colors resize-none"
+              rows="5"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-[#0D0D1A] border border-[#D4AF37]/20 text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] text-sm resize-none"
+              placeholder="How can we help you?"
             ></textarea>
           </div>
-          <button
-            type="submit"
-            class="w-full bg-gradient-to-r from-[#D4AF37] to-[#7C3AED] text-white font-bold py-4 rounded-xl text-lg hover:opacity-90 transition-opacity"
-          >
-            Send Message
+          <button type="submit" class="btn-gold w-full">
+            Send Message →
           </button>
+          <p class="text-gray-600 text-xs text-center">For now, please email us directly at support@mindsuccessprogram.com. We're working on making this form fully functional.</p>
         </form>
-
-        <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p class="text-gray-400">Or email us directly at</p>
-          <a href="mailto:contact@mindsuccessprogram.com" class="text-[#D4AF37] font-semibold text-lg hover:underline">
-            contact@mindsuccessprogram.com
-          </a>
-        </div>
       </div>
     </div>
   </section>

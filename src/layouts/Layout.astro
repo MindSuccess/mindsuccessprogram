@@ -62,6 +62,12 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).href;
     </script>
   </head>
   <body>
+    <!-- Affiliate Disclosure Banner -->
+    <div class="bg-[#1A1A2E] border-b border-[#D4AF37]/20 py-2 px-4 text-center">
+      <p class="text-gray-400 text-xs">
+        <strong class="text-[#D4AF37]">Affiliate Disclosure:</strong> Mind Success Program earns commissions from qualifying purchases made through links on this site, at no extra cost to you. <a href="/about/" class="text-[#D4AF37] hover:underline">Learn more</a>.
+      </p>
+    </div>
     <Header />
     <main>
       <slot />
